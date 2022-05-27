@@ -1,8 +1,14 @@
-<!DOCTYPE HTML>
-<html>
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>xInfoLab - 旋转星空</title>
+  <meta charset="utf-8">
+  <meta name="keywords" content="xInfoLab" />
+  <meta name="description" content="xInfoLab" />
+  <meta name="viewport" content="initial-scale=1, minimal-ui">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8">
+  <link rel="icon" class="js-site-favicon" type="image/svg+xml" href="/favicon.svg">
 </head>
 
 <body style="margin: 0; padding: 0; overflow: hidden;">
@@ -10,7 +16,6 @@
 
   <script>
     "use strict";
-
     // 背景canvas
     var canvas = document.getElementById('canvas'),
       ctx = canvas.getContext('2d'),
@@ -23,12 +28,10 @@
       maxStars = 2000; //星星数量
 
     // 星星canvas
-    var canvas2 = document.createElement('canvas'),
-      ctx2 = canvas2.getContext('2d');
+    var canvas2 = document.createElement('canvas'), ctx2 = canvas2.getContext('2d');
     canvas2.width = 100;
     canvas2.height = 100;
-    var half = canvas2.width / 2,
-      gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+    var half = canvas2.width / 2, gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
     gradient2.addColorStop(0.025, '#CCC');
     gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
     gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
